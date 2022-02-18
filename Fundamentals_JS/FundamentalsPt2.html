@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = utf-8>
+        <title>Button Mode</title>
+    </head>
+    <body>
+        <button>Press Me</button>
+        <script>
+
+            // Create a welcome button interaction
+
+            const button = document.querySelector(`button`); //selects the HTML button
+
+            function greet() {
+                const name = prompt(`What is yoru name?`); //input prompt
+                alert(`Hello ${name}, nice to see you!`);  //call input and display
+        }
+            button.addEventListener(`click`, greet);
+
+            //convert to lowercase and replace the second half
+
+            const quote = 'I dO nOT lIke gREen eGgS anD HAM';
+
+// Add your code here
+
+let fixedQuote = quote.toLowerCase(); //make all quote lowercase
+let index = quote.indexOf('g'); // index place in code to be cut
+let finalQuote = (fixedQuote((0, index) + 'sardines and grass.')) // parse first and second parts and caputalize first letter.
+
+// Create Login Portal from schema: https://javascript.info/logical-operators
+
+        </script>
+    </body>
+</html>

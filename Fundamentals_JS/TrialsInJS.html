@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "utf-8">
+        <title>wtf</title>
+    </head>
+    <body>
+        <button>Words</button>
+        <script>
+            const button = document.querySelector("button")
+
+            function hello () {
+                const access = prompt("Who are you?", "");
+                const password = prompt("Please enter password", "")      
+            if (access === "Admin") {
+                  if (password === "TheMaster") {
+                      alert("Welcome!");
+                  } else if (password !== "TheMaster") {
+                      alert("Wrong Password");
+                  } else if (password === "") {
+                      alert("Canceled")
+                  }
+            } else if (access === "") {
+                alert("Canceled");
+            } else if (access !=="Admin") {
+                alert("I don't know you");
+            }
+        } 
+    
+
+            button.addEventListener("click", hello)
+        </script>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Call Stack</title>
+    </head>
+    <body>
+        <p><a href="https://www.javascripttutorial.net/javascript-call-stack/">JavaScript Call Stack</p>
+        <script>
+            // Learn about the Call Stack, mechanism to track function calls
+
+            // manages *execution contexts* - global execution contexts and function execution contexts
+            // works on LIFO 'Last In First Out'
+            
+            // when executing a script, JS engine creates a global execution context and pushes it to the top of the call stakc.
+
+            // when a function is called, JS creates a function exectuion context and pushes it to the top of the call stack > starts executing the function
+
+            // when functions call other functions, JS creates a NEW function execution context for the funciton that is being called and pushes it to the top of the call stack
+
+            // when the function completes, JS pops it off the stack and continues execution where it left off in the last code lsiting
+
+            // Script stops when call stack is empty
+
+            // Example
+            /*
+
+            function add(a, b) {
+                return a + b;
+            }
+
+            function average(a, b) {
+                return add(a, b) / 2;
+            }
+
+            let x = average(10, 20);
+
+            // main is set up() > x calls average > average calls add > add is processed and removed > average is processed and removed > stack is empty > script finishes
+
+            */
+
+            // stack overflow
+            // stack has a fixed size, depending on the implementation of the host env. --> either web browser or node.js
+
+            // if number of executions exceeds the stack size, stack overflow occurs
+
+            // Ex --> a recursive function with no exit condition
+
+            function foo() {
+                foo();
+            }
+
+            foo(); // Stack overflow
+
+            // Javascript is a single thread programming language. 
+            // only one call stack, only one thing at a time
+            // code executes top to bottom, line by line = synchronous
+
+            // Asynchronous is opposite of this..happening concurrently
+            // JS implements 'event loops' to deal with callbacks, promises, and async/wait . cover later
+
+
+        </script>
+    </body>
+</html>

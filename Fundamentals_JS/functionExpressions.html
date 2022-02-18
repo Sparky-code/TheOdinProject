@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <Title>Function Expressions</Title>
+    </head>
+    <body>
+
+        <p>https://javascript.info/function-expressions</p>
+        
+        <script>
+            //Til now the type of functions used have been 'function DECLARATION syntax'
+            // ex: function sayHi() {
+                // alert('hello');
+            
+            // another type is 'function EXPRESSION syntax'
+            // allows to create new functions within functions
+            //eg let sayHi = function() {
+                //alert('hello');
+
+            // the function creation happens to the right of the '=', this is function expression
+            // note there is no name called by function(), omiting a name is allowable for FE.
+
+            /*
+            
+            //functions are special values but are still values. can be worked with the same as other values
+            // eg copying functions to another variable
+
+            function sayHi() { // create (1)
+                alert('hello');
+            }
+
+            let func = sayHi; // copy (2) // 'sayHi' would instead return the result of sayHi, not the function itself
+
+            func(); // hello  // run copy (3)
+            sayHi(); // hello // original stil works
+            // function can now be called as either of these
+
+            let sayHi = function() { // create (1)
+                alert('hello');
+            }; // why is there an extra semicolon here?
+
+            let func = sayHi;
+            // function expression is created above 'let sayHi...' as function(...) {...}
+            // inside the assignment statement let sayHi = ...; 
+            // the semicolon is recommended at the end of the statement, its not part of the function syntax
+            // a simpler example let sayHi = 5; > it is the same for a function
+
+            */
+
+            /*
+
+            // Callback Functions
+            // a. ask a question b. yes function c. no function
+
+            function ask(question, yes, no) {
+                if (confirm(question)) yes()
+                else no();
+            }
+
+            function showOk() {
+                alert( 'you agreed.' );
+            }
+
+            function showCancel() {
+                alert( 'you canceled.');
+            }
+
+            // usage: functions showOk, showCancel are passed as arguemetns to ask 
+            ask('Do you agree?', showOk, showCancel);
+
+            //powerful functions - real life versions have more complexity including UI
+            // we pass a function to be called back layer if neccessary. showOk becomes callback for
+            // 'yes', showCancel for 'no'.
+
+            */
+
+            // can be written much shorter with FE.
+
+            function ask(question, yes, no) {
+                if (confirm(question)) yes()
+                else no();
+            }
+
+            ask(
+                'Do you agree?',
+                function() { alert('You agreed.'); },
+                function() { alert('You canceled.'); }
+            );
+
+            // the functions within the ask() have no name and so are anonymous. these
+            // functions are NOT available outside of ask.
+
+            // A function is a value representing an ' action '
+            //regular values like strings or numbers represent data 
+            // > a function can be perceived as an action 
+            //  > we can pass it between variables and run when we want
+
+            // FD vs FE ?
+            // when we need to declare a function, first consider FD syntax
+            // * More freedom in organization (FDs can be called before declaration)
+            // ** FDs are more eye catching and readable
+            // *** if conditional declarations are needed, explore FEs.
+
+            
+
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Arrow Function Basics</title>
+    </head>
+    <body>
+        <p href="https://javascript.info/arrow-functions-basics">Arrow Function Basics</p>
+
+        <p href="https://javascript.info/arrow-functions">Follow up page</p>
+
+        <script>
+
+            /*
+
+            // simple concise syntax for creating functions, often better
+            // than FEs.
+
+            let func = (arg1, arg2, ...a, argN) => expression;
+
+            // a shorthand way of writing
+
+            let func = function(arg1, arg2, ...a, argN) {
+                return expression;
+            };
+
+            */
+
+            /*
+
+            // Full example
+
+            let sum = (a, b) => a + b;
+
+            // shorthand for
+            
+
+            let sum = function(a, b) {
+                return a + b;
+            };
+
+            
+
+            alert(sum (1, 2) ); // 3
+
+            */
+
+            // parenthesis can be omitted if a single argument
+            // let double = n => n*2; == let double = function(n) { return n*2 };
+            // If NO argument, parentheses will be empty but should still be in place
+            // let sayHi = () => alert('hello!');
+
+            // arrows can dynamically create functions as well
+
+            /*
+
+            let age = prompt('How old are you?', 18);
+
+            let welcome = (age < 18) ?
+              () => alert('Hello!') :
+              () => alert('Greetings!');
+
+            welcome();
+
+            */
+
+            // without curly braces (...args) => expression
+            // right side is expression, function evals and returns result
+
+            // With curly braces (...args) => {body}
+            // brackets allow multiples statements inside the function
+            // !! an explicit 'return' is required to return something.
+
+            // Tasks
+
+            //oof.
+
+            /*
+
+            let question = ('do you concur?');
+
+            let ask = (question);
+            
+              
+            let welcome = (ask, yes, no);
+              () => confirm(question) (yes(), alert('You agreed'));
+              () => no() (alert("you cannceled."));
+
+              */
+
+              // Solution
+              // the answer was in the question replace FUNCTION EXPRESSIONS with arrow func
+
+              function ask(question, yes, no) {
+                  if (confirm(question)) yes();
+                  else no()
+              }
+
+              ask (
+                  'Do you concur?',
+                  () => alert('you agreed'),
+                  () => alert('you don\'t agree?')
+              )
+            
+            
+
+
+        </script>
+    </body>
+</html>
