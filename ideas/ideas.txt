@@ -1,0 +1,9 @@
+// A repository of ideas for side projects while doing ODIN
+
+- A time tracker dashboard.
+--create a time tracker that support the pomo method and flowstate method
+--create 3 habits, a primary and two supporting goals
+--create 2 branches, a research/abstract and an applied (same habit set-up)
+--Display time for each habit/day and apply timer values to pie chart for each habit
+--track data over time and prompt for reflections at regular intervals
+--remind user of reflections at regular intervals (at this time last month/year/etc)
